@@ -57,18 +57,22 @@
   :ensure t
   :config (global-git-gutter-mode t))
 
-(use-package ido
-  :config (ido-mode)
-  :custom
-  (ido-enable-flex-matching t)
-  (ido-everywhere t))
+;; (use-package ido
+;;   :config (ido-mode)
+;;   :custom
+;;   (ido-enable-flex-matching t)
+;;   (ido-everywhere t))
 
-(use-package ido-completing-read+
-  :ensure t
-  :config (ido-ubiquitous-mode 1))
+;; use-package ido-completing-read+
+;;  :ensure t
+;;  :config (ido-ubiquitous-mode 1))
 
 (use-package ispell
   :custom (ispell-dictionary "british"))
+
+(use-package ivy
+  :ensure t
+  :init (ivy-mode 1))
 
 (use-package multiple-cursors
   :ensure t
