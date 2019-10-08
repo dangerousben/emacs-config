@@ -7,4 +7,4 @@
 
 (use-package sbt-mode
   :ensure t
-  :custom (sbt:program-options '("-no-colors" "-java-home" "/home/ben/opt/graalvm-ce-19.2.0.1/")))
+  :custom (sbt:program-options '("-no-colors" "-java-home" "/home/ben/opt/jdk")))
