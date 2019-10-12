@@ -8,4 +8,7 @@
   :bind (:map emacs-lisp-mode-map ("C-c C-c" . eval-defun))
   :hook (emacs-lisp-mode . my-emacs-lisp-mode-hook))
 
-(use-package elisp-slime-nav :ensure t)
+(use-package elisp-slime-nav
+  :ensure t
+  :hook (ielm-mode . turn-on-elisp-slime-nav-mode)
+  :hook (emacs-lisp-mode . turn-on-elisp-slime-nav-mode))
