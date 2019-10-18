@@ -93,6 +93,7 @@
   :bind (:map vc-annotate-mode-map ("q" . kill-buffer-and-window)))
 
 (load "prog-lsp")
+(load "prog-c")
 (load "prog-elisp")
 (load "prog-java")
 (load "prog-js")
