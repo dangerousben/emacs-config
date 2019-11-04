@@ -101,5 +101,6 @@
 (load "prog-scala")
 (load "prog-typescript")
 (load "prog-web")
+(load "prog-yaml")
 
 (load "日本語")
