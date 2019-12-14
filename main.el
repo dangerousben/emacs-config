@@ -32,6 +32,9 @@
 (defun open-shell () (interactive) (start-process "urxvtcd" nil "urxvtcd"))
 (bind-key "C-x c" #'open-shell)
 
+(use-package browse-kill-ring
+  :ensure t)
+
 (use-package comint
   :bind (:map comint-mode-map ("Cc M-o" . comint-clear-buffer)))
 
