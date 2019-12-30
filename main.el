@@ -32,6 +32,7 @@
 (defun open-shell () (interactive) (start-process "urxvtcd" nil "urxvtcd"))
 (bind-key "C-x c" #'open-shell)
 
+(global-auto-revert-mode t)
 (global-prettify-symbols-mode t)
 
 (use-package browse-kill-ring
