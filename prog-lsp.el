@@ -8,6 +8,9 @@
         ("C-c d" . lsp-describe-thing-at-point)
         ("C-c f" . lsp-execute-code-action)))
 
-(use-package lsp-ui :ensure t)
+(use-package lsp-ui
+  :ensure t
+  :config
+  (flycheck-add-next-checker 'lsp-ui 'typescript-tslint))
 
 (use-package company-lsp :ensure t)
