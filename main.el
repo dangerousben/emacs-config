@@ -107,6 +107,7 @@
 (load "prog-js")
 (load "prog-lisp")
 (load "prog-python")
+(load "prog-rust")
 (load "prog-scala")
 (load "prog-typescript")
 (load "prog-web")
