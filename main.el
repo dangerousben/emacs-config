@@ -98,6 +98,8 @@
 (use-package vc-annotate
   :bind (:map vc-annotate-mode-map ("q" . kill-buffer-and-window)))
 
+;;; TODO Deboilerplate-ise this (automatic loads (from a subdir?), with numeric ordering if necessary)
+
 (load "prog-lsp")
 (load "prog-prettier")
 
