@@ -1,3 +1,5 @@
+(add-to-list 'load-path (file-name-directory (file-truename load-file-name)))
+
 ;; Get these in early
 (menu-bar-mode 0)
 (tool-bar-mode 0)
@@ -15,10 +17,7 @@
 	      show-trailing-whitespace t)
 
 ;; Optional local customisations
-(when (file-exists-p
-       (expand-file-name
-        "local.el" (file-name-directory (or load-file-name buffer-file-name))))
-  (load "local"))
+(load "local" t)
 
 ;; Packages
 (require 'package)
