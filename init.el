@@ -100,6 +100,8 @@
 ;;; TODO Deboilerplate-ise this (automatic loads (from a subdir?), with numeric ordering if necessary)
 
 (load "prog-lsp")
+
+(load "prog-cmake")
 (load "prog-js-shared")
 
 (load "prog-c")
