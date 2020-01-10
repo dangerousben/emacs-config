@@ -38,7 +38,7 @@
   :ensure t)
 
 (use-package comint
-  :bind (:map comint-mode-map ("Cc M-o" . comint-clear-buffer)))
+  :bind (:map comint-mode-map ("C-c M-o" . comint-clear-buffer)))
 
 (use-package company
   :ensure t
