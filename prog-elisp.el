@@ -5,7 +5,7 @@
   :config
   (setq flycheck-emacs-lisp-initialize-packages t
         flycheck-emacs-lisp-load-path 'inherit)
-  :bind (:map emacs-lisp-mode-map ("C-c C-c" . eval-defun))
+  :bind (:map emacs-lisp-mode-map ("C-c C-c" . eval-defun) ("C-c C-v z" . ielm))
   :hook (emacs-lisp-mode . my-emacs-lisp-mode-hook))
 
 (use-package elisp-slime-nav
