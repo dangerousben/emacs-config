@@ -14,3 +14,6 @@
   (flycheck-add-next-checker 'lsp-ui 'typescript-tslint))
 
 (use-package company-lsp :ensure t)
+
+(use-package dap-mode
+  :ensure t)
