@@ -97,6 +97,10 @@
 (use-package vc-annotate
   :bind (:map vc-annotate-mode-map ("q" . kill-buffer-and-window)))
 
+;;; Major modes not worthy of their own file
+
+(use-package dockerfile-mode :ensure t)
+
 ;;; TODO Deboilerplate-ise this (automatic loads (from a subdir?), with numeric ordering if necessary)
 
 (load "prog-lsp")
