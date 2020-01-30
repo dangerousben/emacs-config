@@ -26,6 +26,13 @@
   (package-refresh-contents)
   (package-install 'use-package))
 (require 'use-package)
+(use-package auto-package-update
+  :custom
+  (auto-package-update-delete-old-versions t)
+  (auto-package-update-hide-results t)
+  :config
+  (auto-package-update-maybe)
+  (auto-package-update-at-time "13:00"))
 
 ;; Global functions and  keybindings
 (defun open-shell () (interactive) (start-process "urxvtcd" nil "urxvtcd"))
