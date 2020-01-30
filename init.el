@@ -10,7 +10,8 @@
 (setq user-mail-address "dangerous.ben@gmail.com")
 
 ;; Config set by all right-minded people
-(setq backup-inhibited t
+(setq auto-save-default nil
+      backup-inhibited t
       column-number-mode t
       custom-file (expand-file-name "custom.el" user-emacs-directory))
 (setq-default indent-tabs-mode nil
