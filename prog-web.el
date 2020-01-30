@@ -1,5 +1,4 @@
 (use-package web-mode
-  :ensure t
   :custom
   (web-mode-enable-auto-indentation nil)
   (web-mode-enable-auto-quoting nil)

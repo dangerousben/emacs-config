@@ -2,6 +2,7 @@
   (setq flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
 
 (use-package elisp
+  :ensure nil
   :config
   (setq flycheck-emacs-lisp-initialize-packages t
         flycheck-emacs-lisp-load-path 'inherit)
@@ -12,6 +13,5 @@
   :hook (emacs-lisp-mode . my-emacs-lisp-mode-hook))
 
 (use-package elisp-slime-nav
-  :ensure t
   :hook (ielm-mode . turn-on-elisp-slime-nav-mode)
   :hook (emacs-lisp-mode . turn-on-elisp-slime-nav-mode))

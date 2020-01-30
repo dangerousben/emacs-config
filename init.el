@@ -33,6 +33,8 @@
   :config
   (auto-package-update-maybe)
   (auto-package-update-at-time "13:00"))
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
 
 ;; Global functions and  keybindings
 (defun open-shell () (interactive) (start-process "urxvtcd" nil "urxvtcd"))
@@ -41,14 +43,13 @@
 (global-auto-revert-mode t)
 (global-prettify-symbols-mode t)
 
-(use-package browse-kill-ring
-  :ensure t)
+(use-package browse-kill-ring)
 
 (use-package comint
+  :ensure nil
   :bind (:map comint-mode-map ("C-c M-o" . comint-clear-buffer)))
 
 (use-package company
-  :ensure t
   :config (global-company-mode t))
 
 (use-package dabbrev
@@ -58,15 +59,12 @@
   :config (global-eldoc-mode))
 
 (use-package flycheck
-  :ensure t
   :config (global-flycheck-mode t))
 
 (use-package flycheck-pos-tip
-  :ensure t
   :config (flycheck-pos-tip-mode t))
 
 (use-package git-gutter
-  :ensure t
   :config (global-git-gutter-mode t))
 
 (use-package ido
@@ -79,11 +77,9 @@
   :custom (ispell-dictionary "british"))
 
 (use-package multiple-cursors
-  :ensure t
   :bind ("C-c m" . mc/mark-all-dwim))
 
 (use-package popup-imenu
-  :ensure t
   :bind ("C-c i" . popup-imenu))
 
 (defun switch-window () (interactive) (shell-command "stumpish other-in-frame"))
@@ -96,17 +92,19 @@
   :config (global-subword-mode t))
 
 (use-package uniquify
+  :ensure nil
   :custom (uniquify-buffer-name-style 'forward))
 
 (use-package vc
   :custom (vc-follow-symlinks t))
 
 (use-package vc-annotate
+  :ensure nil
   :bind (:map vc-annotate-mode-map ("q" . kill-buffer-and-window)))
 
 ;;; Major modes not worthy of their own file
 
-(use-package dockerfile-mode :ensure t)
+(use-package dockerfile-mode)
 
 ;;; TODO Deboilerplate-ise this (automatic loads (from a subdir?), with numeric ordering if necessary)
 

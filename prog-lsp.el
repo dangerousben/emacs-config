@@ -1,5 +1,4 @@
 (use-package lsp-mode
-  :ensure t
   :config
   (setq lsp-enable-snippet nil
         lsp-prefer-flymake nil)
@@ -9,11 +8,9 @@
         ("C-c f" . lsp-execute-code-action)))
 
 (use-package lsp-ui
-  :ensure t
   :config
   (flycheck-add-next-checker 'lsp-ui 'typescript-tslint))
 
-(use-package company-lsp :ensure t)
+(use-package company-lsp)
 
-(use-package dap-mode
-  :ensure t)
+(use-package dap-mode)
