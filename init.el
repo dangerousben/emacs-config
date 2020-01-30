@@ -59,6 +59,10 @@
 (use-package eldoc
   :config (global-eldoc-mode))
 
+(use-package epa-file
+  :ensure nil
+  :config (epa-file-enable))
+
 (use-package flycheck
   :config (global-flycheck-mode t))
 
@@ -127,4 +131,5 @@
 (load "prog-web")
 (load "prog-yaml")
 
-(load "日本語")
+(load "write-org")
+(load "write-日本語")
