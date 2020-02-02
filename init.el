@@ -37,6 +37,10 @@
 (require 'use-package-ensure)
 (setq use-package-always-ensure t)
 
+;; Theme
+(use-package hc-zenburn-theme
+  :config (load-theme 'hc-zenburn t))
+
 ;; Global functions and  keybindings
 (defun open-shell () (interactive) (start-process "urxvtcd" nil "urxvtcd"))
 (bind-key "C-x c" #'open-shell)
