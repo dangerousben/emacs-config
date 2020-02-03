@@ -13,7 +13,8 @@
 (setq auto-save-default nil
       backup-inhibited t
       column-number-mode t
-      custom-file (expand-file-name "custom.el" user-emacs-directory))
+      custom-file (expand-file-name "custom.el" user-emacs-directory)
+      vc-follow-symlinks t)
 (setq-default indent-tabs-mode nil
 	      show-trailing-whitespace t)
 
