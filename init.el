@@ -15,8 +15,9 @@
       column-number-mode t
       custom-file (expand-file-name "custom.el" user-emacs-directory)
       vc-follow-symlinks t)
-(setq-default indent-tabs-mode nil
-	      show-trailing-whitespace t)
+(setq-default fill-column 110
+              indent-tabs-mode nil
+              show-trailing-whitespace t)
 
 ;; Optional local customisations
 (load "local" t)
