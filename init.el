@@ -44,7 +44,7 @@
   :config (load-theme 'sanityinc-tomorrow-blue t))
 
 ;; Global functions and  keybindings
-(defun open-shell () (interactive) (start-process "urxvtcd" nil "urxvtcd"))
+(defun open-shell () (interactive) (start-process "st" nil "st"))
 (bind-key "C-x c" #'open-shell)
 
 (global-auto-revert-mode t)
