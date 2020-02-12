@@ -1,4 +1,5 @@
 (use-package lsp-mode
+  :custom (lsp-file-watch-threshold 8192)
   :config
   (setq lsp-enable-snippet nil
         lsp-prefer-flymake nil)
