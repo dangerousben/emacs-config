@@ -2,7 +2,6 @@
   (setq prettify-symbols-alist
         (append scala-mode-pretty-arrows-alist
                 '(("<=" . ?≤) (">=" . ?≥) ("==" . ?≡) ("===" . ?≣))))
-  (variable-pitch-mode)
   (lsp))
 
 (use-package scala-mode

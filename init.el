@@ -125,6 +125,7 @@
 
 ;;; TODO Deboilerplate-ise this (automatic loads (from a subdir?), with numeric ordering if necessary)
 
+(load "prog-look")
 (load "prog-lsp")
 
 (load "prog-cmake")
