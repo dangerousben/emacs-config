@@ -13,6 +13,7 @@
 (setq auto-save-default nil
       backup-inhibited t
       column-number-mode t
+      create-lockfiles nil
       custom-file (expand-file-name "custom.el" user-emacs-directory)
       vc-follow-symlinks t)
 (setq-default fill-column 110
