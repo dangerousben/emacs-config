@@ -132,6 +132,7 @@
 (load "prog-json")
 (load "prog-lisp")
 (load "prog-python")
+(load "prog-racket")
 (load "prog-rust")
 (load "prog-scala")
 (load "prog-typescript")
