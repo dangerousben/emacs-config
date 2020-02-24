@@ -139,5 +139,6 @@
 (load "prog-web")
 (load "prog-yaml")
 
+(load "write-markdown")
 (load "write-org")
 (load "write-日本語")
