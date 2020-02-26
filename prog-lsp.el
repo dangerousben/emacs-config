@@ -2,7 +2,8 @@
   :custom (lsp-file-watch-threshold 8192)
   :config
   (setq lsp-enable-snippet nil
-        lsp-prefer-flymake nil)
+        lsp-idle-delay 0.500
+        lsp-prefer-capf t)
   :bind
   (:map lsp-mode-map
         ("C-c d" . lsp-describe-thing-at-point)

@@ -15,6 +15,8 @@
       column-number-mode t
       create-lockfiles nil
       custom-file (expand-file-name "custom.el" user-emacs-directory)
+      gc-cons-threshold 100000000
+      read-process-output-max (* 1024 1024)
       vc-follow-symlinks t)
 (setq-default fill-column 110
               indent-tabs-mode nil
@@ -58,7 +60,10 @@
   :bind (:map comint-mode-map ("C-c M-o" . comint-clear-buffer)))
 
 (use-package company
-  :config (global-company-mode t))
+  :config
+  (setq company-minimum-prefix-length 1
+        company-idle-delay 0.0)
+  (global-company-mode t))
 
 (use-package dabbrev
   :custom (dabbrev-case-replace nil))
