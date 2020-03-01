@@ -15,7 +15,8 @@
 
 (defun my-ielm-mode-hook ()
   (eldoc-mode  t)
-  (turn-on-elisp-slime-nav-mode))
+  (turn-on-elisp-slime-nav-mode)
+  (set-prog-look))
 
 (use-package ielm
   :hook (ielm-mode . my-ielm-mode-hook))
