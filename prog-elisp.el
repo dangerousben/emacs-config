@@ -1,5 +1,6 @@
 (defun my-emacs-lisp-mode-hook ()
-  (setq flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
+  (setq flycheck-disabled-checkers '(emacs-lisp-checkdoc))
+  (turn-on-elisp-slime-nav-mode))
 
 (use-package elisp
   :ensure nil
@@ -12,6 +13,11 @@
               ("C-c C-v z" . ielm))
   :hook (emacs-lisp-mode . my-emacs-lisp-mode-hook))
 
-(use-package elisp-slime-nav
-  :hook (ielm-mode . turn-on-elisp-slime-nav-mode)
-  :hook (emacs-lisp-mode . turn-on-elisp-slime-nav-mode))
+(defun my-ielm-mode-hook ()
+  (eldoc-mode  t)
+  (turn-on-elisp-slime-nav-mode))
+
+(use-package ielm
+  :hook (ielm-mode . my-ielm-mode-hook))
+
+(use-package elisp-slime-nav)
