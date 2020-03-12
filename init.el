@@ -148,4 +148,5 @@
 
 (load "write-markdown")
 (load "write-org")
+(load "write-text")
 (load "write-日本語")
