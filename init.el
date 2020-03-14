@@ -146,6 +146,8 @@
 (load "prog-web")
 (load "prog-yaml")
 
+(load "write-shared")
+
 (load "write-markdown")
 (load "write-org")
 (load "write-text")

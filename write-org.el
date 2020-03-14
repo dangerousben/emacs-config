@@ -1,7 +1,4 @@
-(defun my-org-mode-hook ()
-  (company-mode -1))
-
-(add-hook 'org-mode-hook 'my-org-mode-hook)
+(add-hook 'org-mode-hook 'my-writing-mode-hook)
 
 (use-package org-crypt
   :ensure nil
