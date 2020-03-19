@@ -142,6 +142,7 @@
 (load "prog-racket")
 (load "prog-rust")
 (load "prog-scala")
+(load "prog-thrift")
 (load "prog-typescript")
 (load "prog-web")
 (load "prog-yaml")
