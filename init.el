@@ -131,6 +131,7 @@
 (load "prog-cmake")
 (load "prog-js-shared")
 
+(load "prog-ansible")
 (load "prog-c")
 (load "prog-elisp")
 (load "prog-execline")
