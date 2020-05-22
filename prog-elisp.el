@@ -21,4 +21,5 @@
 (use-package ielm
   :hook (ielm-mode . my-ielm-mode-hook))
 
+(use-package elisp-format)
 (use-package elisp-slime-nav)
