@@ -4,7 +4,6 @@
   '((t :family "Source Code Variable"))
   "Basic face for code")
 (defun set-prog-look ()
-  (buffer-face-set '(code-base))
-  (text-scale-set 2))
+  (buffer-face-set '(code-base)))
 
 (add-hook 'prog-mode-hook 'set-prog-look)
