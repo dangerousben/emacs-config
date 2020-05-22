@@ -135,6 +135,7 @@
 (load "prog-c")
 (load "prog-elisp")
 (load "prog-execline")
+(load "prog-haskell")
 (load "prog-java")
 (load "prog-js")
 (load "prog-json")
