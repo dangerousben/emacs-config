@@ -142,6 +142,7 @@
 (load "prog-lisp")
 (load "prog-python")
 (load "prog-racket")
+(load "prog-ruby")
 (load "prog-rust")
 (load "prog-scala")
 (load "prog-thrift")
