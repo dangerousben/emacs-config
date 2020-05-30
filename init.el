@@ -152,6 +152,7 @@
 
 (load "write-shared")
 
+(load "write-graphviz")
 (load "write-markdown")
 (load "write-org")
 (load "write-plantuml")
