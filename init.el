@@ -134,6 +134,7 @@
 (load "prog-ansible")
 (load "prog-c")
 (load "prog-elisp")
+(load "prog-elixir")
 (load "prog-execline")
 (load "prog-haskell")
 (load "prog-java")
