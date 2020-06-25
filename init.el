@@ -15,6 +15,7 @@
       column-number-mode t
       create-lockfiles nil
       custom-file (expand-file-name "custom.el" user-emacs-directory)
+      load-prefer-newer t
       gc-cons-threshold 100000000
       read-process-output-max (* 1024 1024)
       vc-follow-symlinks t)
