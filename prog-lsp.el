@@ -15,4 +15,5 @@
 
 (use-package company-lsp)
 
+(use-package posframe)
 (use-package dap-mode)
