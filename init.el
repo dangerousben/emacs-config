@@ -137,6 +137,7 @@
 (load "prog-elixir")
 (load "prog-execline")
 (load "prog-haskell")
+(load "prog-idris")
 (load "prog-java")
 (load "prog-js")
 (load "prog-json")
