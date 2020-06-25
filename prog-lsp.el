@@ -22,3 +22,8 @@
 
 (use-package projectile
   :hook (lsp-mode . projectile-mode))
+
+(use-package treemacs)
+(use-package lsp-treemacs
+  :config
+  (lsp-treemacs-sync-mode 1))
