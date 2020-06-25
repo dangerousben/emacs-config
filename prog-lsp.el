@@ -8,7 +8,8 @@
   :bind
   (:map lsp-mode-map
         ("C-c d" . lsp-describe-thing-at-point)
-        ("C-c f" . lsp-execute-code-action)))
+        ("C-c f" . lsp-execute-code-action)
+        ("C-c t" . projectile-toggle-between-implementation-and-test)))
 
 (use-package lsp-ui
   :config
@@ -18,3 +19,6 @@
 
 (use-package posframe)
 (use-package dap-mode)
+
+(use-package projectile
+  :hook (lsp-mode . projectile-mode))
