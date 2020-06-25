@@ -53,6 +53,9 @@
 (global-auto-revert-mode t)
 (global-prettify-symbols-mode t)
 
+(use-package ace-window
+  :bind ("C-x o" . ace-window))
+
 (use-package browse-kill-ring)
 
 (use-package comint
