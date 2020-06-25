@@ -3,6 +3,7 @@
   (lsp-enable-snippet nil)
   (lsp-file-watch-threshold 8192)
   (lsp-idle-delay 0.500)
+  (lsp-lens-auto-enable t)
   (lsp-prefer-capf t)
   :bind
   (:map lsp-mode-map
