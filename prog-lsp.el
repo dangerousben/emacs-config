@@ -5,11 +5,10 @@
   (lsp-idle-delay 0.500)
   (lsp-lens-auto-enable t)
   (lsp-prefer-capf t)
-  :bind
-  (:map lsp-mode-map
-        ("C-c d" . lsp-describe-thing-at-point)
-        ("C-c f" . lsp-execute-code-action)
-        ("C-c t" . projectile-toggle-between-implementation-and-test)))
+  :bind (:map lsp-mode-map :prefix "C-c" :prefix-map my-lsp-mode-map
+              ("d" . lsp-describe-thing-at-point)
+              ("f" . lsp-execute-code-action)
+              ("t" . projectile-toggle-between-implementation-and-test)))
 
 (use-package lsp-ui
   :config
