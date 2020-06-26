@@ -6,8 +6,13 @@
   (lsp-lens-auto-enable t)
   (lsp-prefer-capf t)
   :bind (:map lsp-mode-map :prefix "C-c" :prefix-map my-lsp-mode-map
+              ("E" . lsp-treemacs-error-list)
+              ("I" . lsp-treemacs-implementations)
+              ("S" . lsp-treemacs-references)
+              ("S" . lsp-treemacs-error-symbols)
               ("d" . lsp-describe-thing-at-point)
               ("f" . lsp-execute-code-action)
+              ("p" . 'projectile-command-map)
               ("t" . projectile-toggle-between-implementation-and-test)))
 
 (use-package lsp-ui
