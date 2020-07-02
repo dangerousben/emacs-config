@@ -105,6 +105,11 @@
 (use-package popup-imenu
   :bind ("C-c i" . popup-imenu))
 
+(use-package recentf
+  :ensure nil
+  :config (recentf-mode 1)
+  :bind ("M-r" . recentf-open-files))
+
 (defun switch-window () (interactive) (shell-command "stumpish other-in-frame"))
 (use-package server
   :hook
