@@ -23,6 +23,24 @@
               indent-tabs-mode nil
               show-trailing-whitespace t)
 
+;; Local git checkouts (make sure they're kept up to date)
+(defconst +local-package-dirs+
+  (delete-dups
+   (mapcar #'file-name-directory
+           (directory-files-recursively "/home/ben/src/emacs-packages" "\\.el$" t t t))))
+(dolist (dir +local-package-dirs+) (add-to-list 'load-path dir))
+
+(require 'cl) ; deprecated by no idea wtf replaces the fn I want
+(defun reload-all-local ()
+  (dolist (dir +local-package-dirs+)
+    (let ((local-els (directory-files dir t "\\.el$"))
+          (loaded-els (mapcar (lambda (entry) (string-remove-suffix "c" (car entry))) load-history)))
+      (message "els: %s" (cl-intersection local-els loaded-els))
+      ;; (format "loaded: %s" loaded-els)
+      (dolist (file (cl-intersection local-els loaded-els))
+        (message "loading: %s" file)
+        (load file)))))
+
 ;; Optional local customisations
 (load "local" t)
 
