@@ -15,6 +15,7 @@
 
 (defun my-ielm-mode-hook ()
   (eldoc-mode  t)
+  (prettify-symbols-mode)
   (turn-on-elisp-slime-nav-mode)
   (set-prog-look))
 
