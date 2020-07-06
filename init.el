@@ -79,6 +79,8 @@
 
 (bind-key "C-x D" #'toggle-debug-on-error)
 
+;; TODO list unsaved buffers
+
 (use-package browse-kill-ring)
 
 (use-package comint
