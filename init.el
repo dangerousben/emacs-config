@@ -77,6 +77,8 @@
 (define-key 'symbol-map (kbd "l") "λ")
 (global-set-key (kbd "M-c") 'symbol-map)
 
+(bind-key "C-x D" #'toggle-debug-on-error)
+
 (use-package browse-kill-ring)
 
 (use-package comint
