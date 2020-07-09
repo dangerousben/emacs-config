@@ -19,3 +19,7 @@
 (use-package git-timemachine
   :bind (:map prog-prefix-map
               ("T" . git-timemachine)))
+
+(use-package vc-msg
+  :bind (:map prog-prefix-map
+              ("M" . vc-msg-show)))
