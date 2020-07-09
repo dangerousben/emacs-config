@@ -170,6 +170,7 @@
 (load "prog-elisp")
 (load "prog-elixir")
 (load "prog-execline")
+(load "prog-git")
 (load "prog-haskell")
 (load "prog-idris")
 (load "prog-java")
