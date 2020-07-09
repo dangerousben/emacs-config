@@ -10,3 +10,6 @@
   (gited-verbose t)
   :bind (:map prog-prefix-map
               ("B" . gited-list-local-branches)))
+
+(use-package gitconfig-mode)
+(use-package gitignore-mode)
