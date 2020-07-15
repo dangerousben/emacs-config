@@ -5,4 +5,5 @@
   :mode (("\\.md\\'" . gfm-mode))
   :hook (markdown-mode . my-writing-mode-hook))
 
-(use-package poly-markdown)
+(use-package poly-markdown
+  :hook (markdown-mode . poly-markdown-mode))
