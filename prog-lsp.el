@@ -6,7 +6,7 @@
   (lsp-enable-snippet nil)
   (lsp-file-watch-threshold 8192)
   (lsp-idle-delay 0.500)
-  (lsp-lens-auto-enable t)
+  (lsp-lens-enable t)
   (lsp-prefer-capf t)
   :bind (:map prog-prefix-map
               ("E" . lsp-treemacs-error-list)
