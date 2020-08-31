@@ -1,9 +1,14 @@
+(defun lsp-metals--indent-region (start end)
+  (indent-region-line-by-line start end)
+  (lsp-format-region start end))
+
 (defun my-scala-mode-hook ()
   (setq prettify-symbols-alist
         (append scala-mode-pretty-arrows-alist
                 '(("<=" . ?≤) (">=" . ?≥) ("==" . ?≡) ("===" . ?≣))))
   (ammonite-term-repl-minor-mode t)
-  (lsp))
+  (lsp)
+  (setq-local indent-region-function #'lsp-metals--indent-region))
 
 (use-package scala-mode
   :mode ("\\.sc\\'")
