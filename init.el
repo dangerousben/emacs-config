@@ -82,6 +82,8 @@
 
 ;; TODO list unsaved buffers
 
+(add-hook 'find-file-hook 'auto-insert)
+
 (use-package browse-kill-ring)
 
 (use-package comint
