@@ -74,7 +74,8 @@
 (global-prettify-symbols-mode t)
 
 (define-prefix-command 'symbol-map)
-(define-key 'symbol-map (kbd "l") "λ")
+(define-key 'symbol-map (kbd "l") (lambda () (interactive) (insert-char ?λ)))
+(define-key 'symbol-map (kbd "o") (lambda () (interactive) (insert-char ?°)))
 (global-set-key (kbd "M-c") 'symbol-map)
 
 (bind-key "C-x D" #'toggle-debug-on-error)
