@@ -144,6 +144,9 @@
 (use-package subword
   :config (global-subword-mode t))
 
+(use-package tramp
+  :ensure nil)
+
 (use-package uniquify
   :ensure nil
   :custom (uniquify-buffer-name-style 'forward))
