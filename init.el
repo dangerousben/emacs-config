@@ -124,6 +124,8 @@
 (use-package ispell
   :custom (ispell-dictionary "british"))
 
+(use-package memory-usage)
+
 (use-package multiple-cursors
   :bind ("C-c m" . mc/mark-all-dwim))
 
