@@ -20,7 +20,9 @@
   :hook (scala-mode . my-scala-mode-hook))
 
 (use-package sbt-mode
-  :custom (sbt:program-options '("-no-colors" "-java-home" "/home/ben/opt/jdk")))
+  :custom
+  (sbt:program-options '("-no-colors" "-java-home" "/home/ben/opt/jdk"))
+  (sbt:prefer-nested-projects t))
 
 (use-package lsp-metals)
 
