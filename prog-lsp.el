@@ -3,13 +3,13 @@
 
 (use-package lsp-mode
   :custom
+  (lsp-completion-provider :capf)
   (lsp-enable-snippet nil)
   (lsp-file-watch-threshold 8192)
-  (lsp-idle-delay 0.500)
+  (lsp-headerline-breadcrumb-segments '(project file symbols))
   (lsp-lens-enable t)
-  (lsp-prefer-capf t)
   :bind (:map prog-prefix-map
-              ("E" . lsp-treemacs-error-list)
+              ("E" . lsp-treemacs-errors-list)
               ("I" . lsp-treemacs-implementations)
               ("S" . lsp-treemacs-references)
               ("S" . lsp-treemacs-error-symbols)
