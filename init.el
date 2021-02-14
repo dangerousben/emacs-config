@@ -166,6 +166,8 @@
 
 ;;; TODO Deboilerplate-ise this (automatic loads (from a subdir?), with numeric ordering if necessary)
 
+(load "misc-uuid")
+
 (load "prog-shared")
 (load "prog-look")
 (load "prog-lsp")
