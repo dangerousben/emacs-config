@@ -193,6 +193,7 @@
 (load "prog-rust")
 (load "prog-scala")
 (load "prog-sh")
+(load "prog-sql")
 (load "prog-thrift")
 (load "prog-typescript")
 (load "prog-web")
