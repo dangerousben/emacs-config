@@ -21,8 +21,6 @@
   ;; :config
   ;; (flycheck-add-next-checker 'lsp-ui 'typescript-tslint))
 
-(use-package company-lsp)
-
 (use-package posframe)
 (use-package dap-mode)
 
