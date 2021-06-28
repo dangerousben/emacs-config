@@ -177,6 +177,7 @@
 
 (load "prog-ansible")
 (load "prog-c")
+(load "prog-csharp")
 (load "prog-elisp")
 (load "prog-elixir")
 (load "prog-execline")
