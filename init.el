@@ -180,6 +180,7 @@
 (load "prog-csharp")
 (load "prog-elisp")
 (load "prog-elixir")
+(load "prog-erlang")
 (load "prog-execline")
 (load "prog-git")
 (load "prog-haskell")
