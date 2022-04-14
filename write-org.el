@@ -4,6 +4,7 @@
   :ensure nil
   :custom
   (org-crypt-key nil)
+  (org-startup-indented t)
   (org-tags-exclude-from-inheritance (quote ("crypt")))
   :config
   (org-crypt-use-before-save-magic))
