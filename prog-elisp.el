@@ -1,3 +1,5 @@
+;; FIXME: figure out how to configure flycheck sensibly
+
 (defun my-emacs-lisp-mode-hook ()
   (setq flycheck-disabled-checkers '(emacs-lisp-checkdoc))
   (turn-on-elisp-slime-nav-mode))

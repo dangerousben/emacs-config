@@ -7,5 +7,5 @@
   (web-mode-markup-indent-offset 2)
   :config
   (flycheck-add-mode 'typescript-tslint 'web-mode)
-  :mode "\\.jsx\\'" "\\.tsx\\'"
+  :mode "\\.jsx\\'" "\\.tsx\\'" ; "\\.cshtmll\\'"
   :hook (web-mode . lsp))

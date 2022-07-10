@@ -1,3 +1,3 @@
 (use-package rust-mode
-  :custom (lsp-rust-server 'rust-analyzer)
+  :custom (lsp-rust-server 'rls)
   :hook (rust-mode . lsp))

@@ -28,9 +28,10 @@
   (delete-dups
    (mapcar #'file-name-directory
            (directory-files-recursively "/home/ben/src/emacs-packages" "\\.el$" t t t))))
+;; FIXME: these don't take precedence over packages?
 (dolist (dir +local-package-dirs+) (add-to-list 'load-path dir))
 
-(require 'cl) ; deprecated by no idea wtf replaces the fn I want
+(require 'cl) ; deprecated but no idea wtf replaces the fn I want
 (defun reload-all-local ()
   (dolist (dir +local-package-dirs+)
     (let ((local-els (directory-files dir t "\\.el$"))
@@ -40,6 +41,8 @@
       (dolist (file (cl-intersection local-els loaded-els))
         (message "loading: %s" file)
         (load file)))))
+
+;(yas-global-mode -1)
 
 ;; Optional local customisations
 (load "local" t)
@@ -67,6 +70,7 @@
   :config (load-theme 'sanityinc-tomorrow-blue t))
 
 ;; Global functions and  keybindings
+;; FIXME: helm overrides this... and I don't even explicitly install helm :(
 (defun open-shell () (interactive) (start-process "st" nil "st"))
 (bind-key "C-x c" #'open-shell)
 
@@ -90,12 +94,14 @@
   :ensure nil
   :bind (:map comint-mode-map ("C-c M-o" . comint-clear-buffer)))
 
+;; TODO sort out company-dabbrev-downcase and friends
 (use-package company
   :config
   (setq company-minimum-prefix-length 1
         company-idle-delay 0.0)
   (global-company-mode t))
 
+;; TODO: figure out case stuff
 (use-package dabbrev
   :custom (dabbrev-case-replace nil))
 
@@ -160,6 +166,9 @@
   :ensure nil
   :bind (:map vc-annotate-mode-map ("q" . kill-buffer-and-window)))
 
+;; (use-package yasnippet
+;;   :custom (yas-keymap-disable-hook (list (lambda () t))))
+
 ;;; Major modes not worthy of their own file
 
 (use-package dockerfile-mode)
@@ -183,6 +192,7 @@
 (load "prog-erlang")
 (load "prog-execline")
 (load "prog-git")
+(load "prog-go")
 (load "prog-haskell")
 (load "prog-idris")
 (load "prog-java")
@@ -209,3 +219,13 @@
 (load "write-plantuml")
 (load "write-text")
 (load "write-日本語")
+
+(defun my-trace (&rest args)
+  (princ "args:")
+  (princ args)
+  (terpri)
+  (princ "trace:")
+  (terpri)
+  (backtrace)
+  (terpri)
+  nil)
