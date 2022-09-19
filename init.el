@@ -74,6 +74,9 @@
 (defun open-shell () (interactive) (start-process "st" nil "st"))
 (bind-key "C-x c" #'open-shell)
 
+(defun insert-current-date () (interactive) (insert (format-time-string "%Y-%m-%d")))
+(bind-key "C-x d" #'insert-current-date)
+
 (global-auto-revert-mode t)
 (global-prettify-symbols-mode t)
 
