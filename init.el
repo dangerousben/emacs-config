@@ -77,6 +77,11 @@
 (defun insert-current-date () (interactive) (insert (format-time-string "%Y-%m-%d")))
 (bind-key "C-x d" #'insert-current-date)
 
+(defun toggle-require-final-newline () (interactive)
+       (setq require-final-newline (not require-final-newline))
+       (message "require-final-newline: %s" require-final-newline))
+(bind-key "C-x N" #'toggle-require-final-newline)
+
 (global-auto-revert-mode t)
 (global-prettify-symbols-mode t)
 
