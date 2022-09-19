@@ -121,6 +121,8 @@
 (use-package flycheck-pos-tip
   :config (flycheck-pos-tip-mode t))
 
+(use-package free-keys)
+
 (use-package git-gutter
   :config (global-git-gutter-mode t))
 
