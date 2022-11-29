@@ -78,6 +78,11 @@
 (defun insert-current-date () (interactive) (insert (format-time-string "%Y-%m-%d")))
 (bind-key "C-x d" #'insert-current-date)
 
+;; Annoying stuff that I never want to do but sometimes hit accidentally (maybe could bind them to something
+;; more useful but that might be very annoying if temporarily using a foreign emacs).
+(bind-key "C-x C-c" nil)
+(bind-key "C-z" nil)
+
 (defun toggle-require-final-newline () (interactive)
        (setq require-final-newline (not require-final-newline))
        (message "require-final-newline: %s" require-final-newline))
