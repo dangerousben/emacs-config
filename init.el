@@ -56,6 +56,8 @@
   (package-refresh-contents)
   (package-install 'use-package))
 (require 'use-package)
+(setq use-package-always-ensure t)
+(setq use-package-verbose t)
 (use-package auto-package-update
   :custom
   (auto-package-update-delete-old-versions t)
@@ -63,8 +65,6 @@
   :config
   (auto-package-update-maybe)
   (auto-package-update-at-time "13:00"))
-(require 'use-package-ensure)
-(setq use-package-always-ensure t)
 
 ;; Theme
 (use-package color-theme-sanityinc-tomorrow
