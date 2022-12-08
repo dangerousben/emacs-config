@@ -27,7 +27,7 @@
 (defconst +local-package-dirs+
   (delete-dups
    (mapcar #'file-name-directory
-           (directory-files-recursively "/home/ben/src/emacs-packages" "\\.el$" t t t))))
+           (directory-files-recursively "/home/ben/src/emacs-packages" "^[^\\.].+\\.el$" t t t))))
 ;; FIXME: these don't take precedence over packages?
 ;; Possibly fixable with :ensure nil?
 (dolist (dir +local-package-dirs+) (add-to-list 'load-path dir))
