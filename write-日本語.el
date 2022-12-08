@@ -1,3 +1,6 @@
+;; Input method (best I've found so far)
+(use-package mozc)
+
 (use-package migemo
   :ensure t
   :custom
