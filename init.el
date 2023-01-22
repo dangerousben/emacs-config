@@ -229,6 +229,7 @@
 
 (load "write-shared")
 
+(load "write-asciidoc")
 (load "write-graphviz")
 (load "write-markdown")
 (load "write-org")
