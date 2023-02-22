@@ -138,7 +138,8 @@
   :config (global-git-gutter-mode t))
 
 (use-package ido
-  :config (ido-mode)
+  :ensure nil
+  :config (ido-mode 1)
   :custom
   (ido-enable-flex-matching t)
   (ido-everywhere t))
