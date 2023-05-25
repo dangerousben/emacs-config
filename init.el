@@ -192,6 +192,8 @@
 
 ;;; TODO Deboilerplate-ise this (automatic loads (from a subdir?), with numeric ordering if necessary)
 
+(load "admin-apparmor")
+
 (load "misc-uuid")
 (load "misc-ztree")
 

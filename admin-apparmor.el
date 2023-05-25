@@ -1,0 +1,2 @@
+(use-package apparmor-mode)
+
