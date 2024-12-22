@@ -213,6 +213,7 @@
 (load "prog-execline")
 (load "prog-git")
 (load "prog-go")
+(load "prog-guile")
 (load "prog-haskell")
 (load "prog-idris")
 (load "prog-java")
