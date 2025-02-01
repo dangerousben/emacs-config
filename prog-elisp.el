@@ -15,6 +15,8 @@
               ("C-c C-v z" . ielm))
   :hook (emacs-lisp-mode . my-emacs-lisp-mode-hook))
 
+(use-package elisp-slime-nav)
+
 (defun my-ielm-mode-hook ()
   (eldoc-mode  t)
   (prettify-symbols-mode)
