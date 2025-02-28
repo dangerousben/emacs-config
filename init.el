@@ -70,10 +70,10 @@
 (use-package color-theme-sanityinc-tomorrow
   :config (load-theme 'sanityinc-tomorrow-blue t))
 
-;; Default font
-(set-frame-font "Liberation Mono-26" nil t t)
+;; Default font (argh this is ridiculous!)
+;; (set-frame-font "Liberation Mono-26" nil t t)
 ;; (add-to-list 'default-frame-alist '(font . "Liberation Mono-20"))
-;; (set-face-attribute 'default nil  :font "Liberation Mono-20")
+(set-face-attribute 'default nil  :font "Liberation Mono-26")
 
 ;; Global functions and  keybindings
 ;; FIXME: helm overrides this... and I don't even explicitly install helm :(
