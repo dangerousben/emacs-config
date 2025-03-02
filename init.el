@@ -206,6 +206,7 @@
 
 (load "prog-ansible")
 (load "prog-c")
+(load "prog-cplusplus")
 (load "prog-csharp")
 (load "prog-elisp")
 (load "prog-elixir")
